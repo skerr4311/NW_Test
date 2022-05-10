@@ -1,0 +1,9 @@
+.MainPage {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f74c0;
+}
+
