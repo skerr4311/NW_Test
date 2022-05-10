@@ -3,10 +3,10 @@ import InputField from '../components/InputField';
 import '../css/mainpage.css'
 import {ScoreItem, Actions} from '../models/models'
 
-const ScoreReducer = (state: ScoreItem[], actions: Actions) => {
-    switch(actions.type){
+const ScoreReducer = (state: ScoreItem[], action: Actions) => {
+    switch(action.type){
         case "add":
-            return state;
+            return [...state, {id: Date.now(), score: action.payload, include: true}];
         case "remove":
             return state;
     }
@@ -28,6 +28,11 @@ const MainPage:React.FC = () => {
             <div className='side-pannel'>
                 <span className='heading'>Side Pannel</span>
                 <InputField score={score} setScore={setScore} handleAdd={HandleAdd}/>
+                <div className='score-list-container'>
+                    {state.map(t => (
+                        t.score
+                    ))}
+                </div>
             </div>
             <div className='main-pannel'>
                 main pannel
