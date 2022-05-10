@@ -32,3 +32,12 @@
         width: 40%;
     }
 }
+
+.stat-item {
+    display: flex;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 1px;
+    color: white;
+    font-size: larger;
+}

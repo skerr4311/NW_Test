@@ -18,7 +18,7 @@ const ScoreList: React.FC<Props> = ({scores, dispatch}) => {
         <div className='score-list-container'>
             {scores.map(s => (
                 <form className="score_single">
-                    <span className="todo-single-text">{s.score}</span>
+                    <span className="todo-single-text">Score: {s.score} / 10</span>
                     <span className="score-icon" onClick={() => handleDelete(s.id)}>
                         <AiFillDelete />
                     </span>
